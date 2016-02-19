@@ -1,6 +1,6 @@
 using System;
 
-namespace Datastruct
+namespace StupidList
 {
 	public class StupidList<T>
 	{

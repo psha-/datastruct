@@ -1,0 +1,42 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="DoublyLinkedList/DoublyLinkedList.cs">
+    <Files>
+      <File FileName="DoublyLinkedList/DoublyLinkedList.cs" Line="92" Column="18" />
+      <File FileName="DoublyLinkedList.Tests/UnitTestsDoublyLinkedList.cs" Line="306" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="DoublyLinkedList" expanded="True">
+            <Node name="DoublyLinkedList.cs" selected="True" />
+          </Node>
+          <Node name="DoublyLinkedList.Tests" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True">
+          <Node name="DoublyLinkedList.Tests" expanded="True">
+            <Node name="DoublyLinkedList" expanded="True">
+              <Node name="Tests" expanded="True" selected="True">
+                <Node name="UnitTestsDoublyLinkedList" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
