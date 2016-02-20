@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StupidList/StupidList.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearStruct/Integers.cs">
     <Files>
-      <File FileName="StupidList/Program.cs" Line="16" Column="1" />
-      <File FileName="StupidList/StupidList.cs" Line="6" Column="1" />
+      <File FileName="LinearStruct/Program.cs" Line="32" Column="9" />
+      <File FileName="LinearStruct/Integers.cs" Line="53" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
