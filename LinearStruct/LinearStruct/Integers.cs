@@ -50,11 +50,12 @@ namespace LinearStruct
 			int seq_length = 1;
 			int seq_number = number;
 
+			int i = 1;
 			// Last element is not checked
-			for (var i=1; i<arr.Count; i++) {
+			for (; i<arr.Count; i++) {
 				if(arr [i] != number ) {
 					if (i - seq_start > seq_length) {
-						// New sequence is longer
+						// Last sequence is longest
 						seq_length = i - seq_start;
 						seq_number = number;
 					}
@@ -63,8 +64,14 @@ namespace LinearStruct
 				}
 			}
 
+			if (i - seq_start > seq_length) {
+				// Last sequence is longest
+				seq_length = i - seq_start;
+				seq_number = number;
+			}
+
 			List<int> seq = new List<int> (seq_length);
-			for(int i = 0; i < seq_length; i++)
+			for(i = 0; i < seq_length; i++)
 			{
 				seq.Add(seq_number);
 			}
