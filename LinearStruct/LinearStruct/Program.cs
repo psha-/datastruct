@@ -40,6 +40,19 @@ namespace LinearStruct
 
 
 
+			// Longest subsequence
+			Console.WriteLine ("Remove odd occurences. Enter space separated integers: ");
+			try {
+				var ints = new Integers (Console.ReadLine());
+				ints.RemoveOddOcc().ForEach(i => Console.Write("{0} ", i));
+
+			}
+			catch(FormatException e) {
+				Console.WriteLine (e.Message);
+			}
+
+
+
 
 		}
 	}

@@ -51,7 +51,6 @@ namespace LinearStruct
 			int seq_number = number;
 
 			int i = 1;
-			// Last element is not checked
 			for (; i<arr.Count; i++) {
 				if(arr [i] != number ) {
 					if (i - seq_start > seq_length) {
@@ -76,6 +75,26 @@ namespace LinearStruct
 				seq.Add(seq_number);
 			}
 			return seq;
+		}
+
+		public List<int> RemoveOddOcc()
+		{
+			var occurences = new Dictionary<int, int> ();
+
+			foreach( int item in arr ) {
+				int count;
+				occurences.TryGetValue(item, out count);
+				occurences [item] = count + 1;
+			}
+
+			var evenOcc = new List<int>();
+			foreach( int item in arr ) {
+				if ( 0 == occurences [item] % 2) {
+					evenOcc.Add (item);
+				}
+			}
+
+			return evenOcc;
 		}
 	}
 }
