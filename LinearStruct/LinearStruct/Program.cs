@@ -6,6 +6,8 @@ namespace LinearStruct
 	{
 		public static void Main (string[] args)
 		{
+
+
 			// Sum and avararge
 			Console.WriteLine ("Sum and Average. Enter space separated integers: ");
 			try {
@@ -108,6 +110,45 @@ namespace LinearStruct
 
 			}
 
+
+
+			// Linked list
+			Console.WriteLine ("Lnked list. Adding ints 1,2,3,4,2,5,6. Removing index 5, 2 and 0.");
+			{
+				var linkedList = new LinkedList<int> ();
+				linkedList.Add (1);
+				linkedList.Add (2);
+				linkedList.Add (3);
+				linkedList.Add (4);
+				linkedList.Add (2);
+				linkedList.Add (5);
+				linkedList.Add (6);
+
+				foreach (var item in linkedList) {
+					Console.Write ("{0} ", item);
+				}
+				Console.Write ("\n");
+				linkedList.Remove (5);
+				foreach (var item in linkedList) {
+					Console.Write ("{0} ", item);
+				}
+				Console.Write ("\n");
+				linkedList.Remove (2);
+				foreach (var item in linkedList) {
+					Console.Write ("{0} ", item);
+				}
+				Console.Write ("\n");
+				linkedList.Remove (0);
+				foreach (var item in linkedList) {
+					Console.Write ("{0} ", item);
+				}
+				Console.Write ("\n");
+				Console.WriteLine ("Head {0}", linkedList.Head.val);
+				Console.WriteLine ("Tail {0}", linkedList.Tail.val);
+				Console.WriteLine ("First index of 2 is {0}", linkedList.FirstIndexOf(2));
+				Console.WriteLine ("Last index of 2 is {0}", linkedList.LastIndexOf(2));
+
+			}
 
 
 		}

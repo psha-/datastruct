@@ -28,21 +28,21 @@ namespace LinearStruct
 			Count++;
 		}
 
-		public void Remove(int id)
+		public void Remove(int index)
 		{
-			arr.RemoveAt (Count - 1 - id);
+			arr.RemoveAt (Count - 1 - index);
 			Count--;
 		}
 
-		public T this[int id]
+		public T this[int index]
 		{
 			get
 			{
-				return arr[Count - 1 - id];
+				return arr[Count - 1 - index];
 			}
 			set
 			{
-				arr[Count - 1 - id] = value;
+				arr[Count - 1 - index] = value;
 			}
 		}
 

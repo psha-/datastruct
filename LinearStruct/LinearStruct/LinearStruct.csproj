@@ -39,6 +39,7 @@
     <Compile Include="Integers.cs" />
     <Compile Include="Words.cs" />
     <Compile Include="ReversedList.cs" />
+    <Compile Include="LinkedList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
