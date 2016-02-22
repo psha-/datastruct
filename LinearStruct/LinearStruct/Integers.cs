@@ -7,6 +7,24 @@ namespace LinearStruct
 	{
 		private List<int> arr;
 
+		public Integers (String input, int min, int max) {
+			if (0 == input.Length) {
+				arr = new List<int> ();
+			} else {
+				var numbers = input.Split ();
+				arr = new List<int> (numbers.Length);
+
+				foreach (var number in numbers) {
+					var num = Int32.Parse (number);
+					if (num < min || num > max) {
+						throw new ArgumentOutOfRangeException();
+					}
+					arr.Add (num);
+				}
+			}
+
+		}
+
 		public Integers (String input)
 		{
 			if (0 == input.Length) {
@@ -79,23 +97,37 @@ namespace LinearStruct
 
 		public List<int> RemoveOddOcc()
 		{
-			var occurences = new Dictionary<int, int> ();
+			var occ = new Dictionary<int, int> ();
 
 			foreach( int item in arr ) {
 				int count;
-				occurences.TryGetValue(item, out count);
-				occurences [item] = count + 1;
+				occ.TryGetValue(item, out count);
+				occ [item] = count + 1;
 			}
 
 			var evenOcc = new List<int>();
 			foreach( int item in arr ) {
-				if ( 0 == occurences [item] % 2) {
+				if ( 0 == occ [item] % 2) {
 					evenOcc.Add (item);
 				}
 			}
 
 			return evenOcc;
 		}
+
+		public Dictionary<int, int> CountOcc()
+		{
+			var occ = new Dictionary<int, int> ();
+
+			foreach( int item in arr ) {
+				int count;
+				occ.TryGetValue(item, out count);
+				occ [item] = count + 1;
+			}
+
+			return occ;
+		}
+
 	}
 }
 
