@@ -7,6 +7,37 @@ namespace LinearStruct
 		public static void Main (string[] args)
 		{
 
+			// Distance in labyrinth
+			Console.WriteLine ("Calcualting distance in labyrinth.");
+
+			{
+				var map = new LabyrinthMap(new LabyrinthMap.mapItem[,] {
+					{ LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x},
+					{ LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x},
+					{ LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o},
+					{ LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o},
+					{ LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o},
+					{ LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x, LabyrinthMap.mapItem.o, LabyrinthMap.mapItem.x}
+				});
+				try {
+					var start = new LabyrinthPos(1, 2);
+					var labyrinth = new Labyrinth ( map, start );
+					labyrinth.map.Print ();
+					var dst = labyrinth.calcDistances();
+					dst.MarkFreeAsU();
+					// Draw the player
+					//dst[start] = LabyrinthMap.mapItem.P;
+					dst.Print();
+
+				}
+				catch( AccessViolationException ) {
+					Console.WriteLine("Invalid start position selected");
+				}
+
+			}
+
+
+
 
 			// Sum and avararge
 			Console.WriteLine ("Sum and Average. Enter space separated integers: ");
