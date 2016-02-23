@@ -10,7 +10,7 @@ public class CircularQueue<T>
     public int Head { get; private set; }
     public int Tail { get; private set; }
 
-    public CircularQueue(int capacity=1)
+    public CircularQueue(int capacity=16)
     {
         arr = new T[capacity];
         Head = Tail = 0;
@@ -35,8 +35,8 @@ public class CircularQueue<T>
             throw new InvalidOperationException("This queue is empty");
         }
         var res = arr[Head];
-        Head = (Head + 1)%arr.Length;
         arr[Head] = default(T);
+        Head = (Head + 1)%arr.Length;
         Count--;
         return res;
     }
