@@ -1,0 +1,4 @@
+C:\Users\User\Documents\CircularQueue\CircularQueue\bin\Debug\CircularQueue.exe
+C:\Users\User\Documents\CircularQueue\CircularQueue\bin\Debug\CircularQueue.pdb
+C:\Users\User\Documents\CircularQueue\CircularQueue\obj\Debug\CircularQueue.exe
+C:\Users\User\Documents\CircularQueue\CircularQueue\obj\Debug\CircularQueue.pdb
