@@ -108,44 +108,33 @@ namespace LinearStruct
 		public LabyrinthMap calcDistances()
 		{
 			var dstMap = new LabyrinthMap(map);
-			Move (ref dstMap, pos, pos);
+			Move (ref dstMap, new LabyrinthPos(pos.x-1, pos.y ), (LabyrinthMap.mapItem)1);
+			Move (ref dstMap, new LabyrinthPos(pos.x+1, pos.y ), (LabyrinthMap.mapItem)1);
+			Move (ref dstMap, new LabyrinthPos(pos.x, pos.y-1 ), (LabyrinthMap.mapItem)1);
+			Move (ref dstMap, new LabyrinthPos(pos.x, pos.y+1 ), (LabyrinthMap.mapItem)1);
 			return dstMap;
 		}
 
-		private void Move(ref LabyrinthMap dstMap, LabyrinthPos currentPos, LabyrinthPos prevPos)
+		private void Move(ref LabyrinthMap dstMap, LabyrinthPos currentPos, LabyrinthMap.mapItem dst)
 		{
-			if (LabyrinthMap.mapItem.o != dstMap [currentPos] && LabyrinthMap.mapItem.P != dstMap [currentPos]) {
-				// Current position is not free
+			if (
+				currentPos.x < 0 || currentPos.x >= dstMap.w 
+			    || currentPos.y < 0 || currentPos.y >= dstMap.h
+				|| dstMap [currentPos] < 0
+			) {
+				// Current position is outside map or on obsticle
+				return;
+			}
+			if (dstMap [currentPos] > 0 && dstMap [currentPos] <= dst) {
 				return;
 			}
 
-			// TODO: Make sure the start position is treated as obsticle after the 1st run
-			LabyrinthMap.mapItem dst;
-			if (LabyrinthMap.mapItem.P == dstMap [prevPos]) {
-				dst = LabyrinthMap.mapItem.o;
-				dstMap [prevPos] = LabyrinthMap.mapItem.x;
-			}
-			else {
-				dst = dstMap [prevPos]+1;
-
-			}
 			dstMap [currentPos] = dst;
 
-			if (currentPos.x > 0) {
-				Move (ref dstMap, new LabyrinthPos(currentPos.x-1, currentPos.y), currentPos);
-			}
-
-			if (currentPos.x < dstMap.w-1) {
-				Move (ref dstMap, new LabyrinthPos(currentPos.x+1, currentPos.y), currentPos);
-			}
-
-			if (currentPos.y > 0) {
-				Move (ref dstMap, new LabyrinthPos(currentPos.x, currentPos.y-1), currentPos);
-			}
-
-			if (currentPos.y < dstMap.h-1) {
-				Move (ref dstMap, new LabyrinthPos(currentPos.x, currentPos.y+1), currentPos);
-			}
+			Move (ref dstMap, new LabyrinthPos(currentPos.x-1, currentPos.y), dst+1);
+			Move (ref dstMap, new LabyrinthPos(currentPos.x+1, currentPos.y), dst+1);
+			Move (ref dstMap, new LabyrinthPos(currentPos.x, currentPos.y-1), dst+1);
+			Move (ref dstMap, new LabyrinthPos(currentPos.x, currentPos.y+1), dst+1);
 		}
 
 
