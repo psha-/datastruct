@@ -3,16 +3,16 @@ using System.Collections.Generic;
 
 public class Tree<T>
 {
-    private T Value;
-    private IList<Tree<T>> children;
+    public T Value;
+    public IList<Tree<T>> Children { get; private set; }
 
     public Tree(T v, params Tree<T>[] children)
     {
         Value = v;
-        this.children = new List<Tree<T>>(children.Length);
+        this.Children = new List<Tree<T>>(children.Length);
         foreach (var child in children)
         {
-            this.children.Add(child);
+            this.Children.Add(child);
         }
 
     }
@@ -21,7 +21,7 @@ public class Tree<T>
     {
         Console.Write(new string(' ', 2*indent));
         Console.WriteLine(Value);
-        foreach (var child in children)
+        foreach (var child in Children)
         {
             child.Print(indent+1);
         }
@@ -30,7 +30,7 @@ public class Tree<T>
     public void Each(Action<T> action)
     {
         action(Value);
-        foreach (var child in children)
+        foreach (var child in Children)
         {
             child.Each(action);
         }
