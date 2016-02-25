@@ -1,17 +1,15 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="LinearStruct/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="LinearStruct/Labyrinth.cs">
     <Files>
-      <File FileName="LinearStruct/Program.cs" Line="86" Column="21" />
-      <File FileName="LinearStruct/Integers.cs" Line="55" Column="17" />
-      <File FileName="LinearStruct/ReversedList.cs" Line="20" Column="26" />
-      <File FileName="LinearStruct/LinkedList.cs" Line="80" Column="9" />
+      <File FileName="LinearStruct/Labyrinth.cs" Line="130" Column="5" />
+      <File FileName="LinearStruct/Program.cs" Line="211" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="LinearStruct" expanded="True">
-            <Node name="Program.cs" selected="True" />
+            <Node name="Labyrinth.cs" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -19,7 +17,14 @@
         <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>pos.x</Value>
+          <Value>pos.y</Value>
+          <Value>currentPos.x</Value>
+          <Value>currentPos.y</Value>
+          <Value>dstMap[currentPos]</Value>
+          <Value>dstMap[pos]</Value>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
