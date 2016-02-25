@@ -1,0 +1,5 @@
+C:\Users\User\Documents\datastruct\BinaryTree\Binary-Tree\bin\Debug\Trees.exe
+C:\Users\User\Documents\datastruct\BinaryTree\Binary-Tree\bin\Debug\Trees.pdb
+C:\Users\User\Documents\datastruct\BinaryTree\Binary-Tree\obj\Debug\Trees.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\datastruct\BinaryTree\Binary-Tree\obj\Debug\Trees.exe
+C:\Users\User\Documents\datastruct\BinaryTree\Binary-Tree\obj\Debug\Trees.pdb
