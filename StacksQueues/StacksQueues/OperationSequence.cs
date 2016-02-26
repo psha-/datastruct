@@ -45,17 +45,26 @@ namespace StacksQueues
 				}
 				if (node.Value == End) {
 					found = true;
-					while (node != null) {
-						Console.Write (" <- {0} ", node.Value);
-						node = node.Prev;
-					}
-					Console.WriteLine ();
+					Print (node);
 					break;
 				}
 			}
 			if (!found) {
 				Console.WriteLine ("(no solution)");
 			}
+		}
+
+		private void Print(Node node)
+		{
+			var seqStack = new Stack<int> ();
+			while (node != null) {
+				seqStack.Push (node.Value);
+				node = node.Prev;
+			}
+			while (seqStack.Count > 1) {
+				Console.Write ("{0} -> ", seqStack.Pop ());
+			}
+			Console.WriteLine ("{0}", seqStack.Pop ());
 		}
 	}
 }

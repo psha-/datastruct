@@ -73,6 +73,10 @@ namespace StacksQueues
 					catch(FormatException e) {
 						Console.WriteLine(e.Message);
 					}
+					catch(IndexOutOfRangeException)
+					{
+						Console.WriteLine("Not all arguments specified");
+					}
 					break;
 
 				}// switch
