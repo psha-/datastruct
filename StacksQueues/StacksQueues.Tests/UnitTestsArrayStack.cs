@@ -25,32 +25,32 @@ namespace StacksQueues.Tests
 		[TestMethod]
 		public void Push_Pop_One()
 		{
-			var intStack = new ArrayStack<int> ();
-			Assert.AreEqual (0, intStack.Count);
+			var ints = new ArrayStack<int> ();
+			Assert.AreEqual (0, ints.Count);
 
 			int element = 1;
-			intStack.Push (element);
-			Assert.AreEqual (1, intStack.Count);
+			ints.Push (element);
+			Assert.AreEqual (1, ints.Count);
 
-			int poppedEl = intStack.Pop ();
+			int poppedEl = ints.Pop ();
 			Assert.AreEqual (poppedEl, element);
 
-			Assert.AreEqual (0, intStack.Count);
+			Assert.AreEqual (0, ints.Count);
 		}
 
 		[TestMethod]
 		public void Push_Pop_Many()
 		{
-			var stringStack = new ArrayStack<string> ();
-			Assert.AreEqual (0, stringStack.Count);
+			var strings = new ArrayStack<string> ();
+			Assert.AreEqual (0, strings.Count);
 
 			for( var i=0; i< 1000; i++ ) {
-				stringStack.Push ("string" + i);
-				Assert.AreEqual (i+1, stringStack.Count);
+				strings.Push ("string" + i);
+				Assert.AreEqual (i+1, strings.Count);
 			}
 			for( var i=0; i< 1000; i++ ) {
-				stringStack.Pop ();
-				Assert.AreEqual (999-i, stringStack.Count);
+				strings.Pop ();
+				Assert.AreEqual (999-i, strings.Count);
 			}
 		}
 
@@ -58,34 +58,34 @@ namespace StacksQueues.Tests
 		[ExpectedException(typeof(InvalidOperationException))]
 		public void Pop_Empty_ShouldThrowException()
 		{
-			var intStack = new ArrayStack<int> ();
-			intStack.Pop ();
+			var ints = new ArrayStack<int> ();
+			ints.Pop ();
 		}
 
 		[TestMethod]
 		public void Push_Pop_InitialCapacity()
 		{
-			var intStack = new ArrayStack<int> (1);
-			Assert.AreEqual (0, intStack.Count);
+			var ints = new ArrayStack<int> (1);
+			Assert.AreEqual (0, ints.Count);
 
 			int element1 = 1;
-			intStack.Push (element1);
-			Assert.AreEqual (1, intStack.Count);
+			ints.Push (element1);
+			Assert.AreEqual (1, ints.Count);
 
 			int element2 = 2;
-			intStack.Push (element2);
-			Assert.AreEqual (2, intStack.Count);
+			ints.Push (element2);
+			Assert.AreEqual (2, ints.Count);
 
 			{
-				int poppedEl = intStack.Pop ();
+				int poppedEl = ints.Pop ();
 				Assert.AreEqual (poppedEl, element2);
-				Assert.AreEqual (1, intStack.Count);
+				Assert.AreEqual (1, ints.Count);
 			}
 
 			{
-				int poppedEl = intStack.Pop ();
+				int poppedEl = ints.Pop ();
 				Assert.AreEqual (poppedEl, element1);
-				Assert.AreEqual (0, intStack.Count);
+				Assert.AreEqual (0, ints.Count);
 			}
 
 
@@ -94,14 +94,14 @@ namespace StacksQueues.Tests
 		[TestMethod]
 		public void Test_ToArray()
 		{
-			var intStack = new ArrayStack<int> ();
+			var ints = new ArrayStack<int> ();
 			int[] arr = {3, 5, -2, 7};
 
 			for( var i=0; i<arr.Length; i++) {
-				intStack.Push(arr[i]);
+				ints.Push(arr[i]);
 			}
 
-			var stackArr = intStack.ToArray();
+			var stackArr = ints.ToArray();
 
 			for( var i=0; i<arr.Length; i++) {
 				Assert.AreEqual(stackArr[arr.Length-i-1], arr[i]);
@@ -112,9 +112,9 @@ namespace StacksQueues.Tests
 		[TestMethod]
 		public void Test_Empty_ToArray()
 		{
-			var dateStack = new ArrayStack<DateTime> ();
+			var dates = new ArrayStack<DateTime> ();
 
-			var stackArr = dateStack.ToArray();
+			var stackArr = dates.ToArray();
 
 			Assert.AreEqual(0, stackArr.Length);
 
