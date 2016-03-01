@@ -14,6 +14,7 @@ namespace StacksQueues
 				Console.WriteLine ("Select:");
 				Console.WriteLine ("1. Reversed numbers");
 				Console.WriteLine ("2. Number sequence S, S+1, 2*S+1, S+2");
+				Console.WriteLine ("3. Shortest operation sequence");
 				Console.WriteLine ("q - Quit");
 
 				Key = Console.ReadKey ();
@@ -56,6 +57,26 @@ namespace StacksQueues
 					}
 
 
+					break;
+
+				case '3':
+					// Shortest operation sequence
+					Console.WriteLine ("Shortest operation sequence. Enter 2 integers (n m):");
+					var input = Console.ReadLine();
+					var ints = input.Split();
+					try {
+						var n = Int32.Parse(ints[0]);
+						var m = Int32.Parse(ints[1]);
+						var seq = new OperationSequence(n, m);
+						seq.CalcPrint();
+					}
+					catch(FormatException e) {
+						Console.WriteLine(e.Message);
+					}
+					catch(IndexOutOfRangeException)
+					{
+						Console.WriteLine("Not all arguments specified");
+					}
 					break;
 
 				}// switch
