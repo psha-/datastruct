@@ -37,31 +37,30 @@ public class GraphConnectedComponents
 
     }
 
-    public static void Main()
+    private static List<int>[] ReadGraph()
     {
-        try {
-            var count = int.Parse(Console.ReadLine());
-            graph = new List<int>[count];
-            for (int i = 0; i < count; i++)
+        var count = int.Parse(Console.ReadLine());
+        var graph = new List<int>[count];
+        for (int i = 0; i < count; i++)
+        {
+            string[] vals = Console.ReadLine().Split();
+            graph[i] = new List<int>(vals.Length);
+            foreach (var val in vals)
             {
-                string[] vals = Console.ReadLine().Split();
-                graph[i] = new List<int>(vals.Length);
-                foreach (var val in vals)
+                int v;
+                if (int.TryParse(val, out v))
                 {
-                    int v;
-                    if (int.TryParse(val, out v))
-                    {
-                        graph[i].Add(v);
-                    }
+                    graph[i].Add(v);
                 }
             }
-            FindConnectedComponent();
+        }
+        return graph;
+    }
 
-        }
-        catch (FormatException e)
-        {
-            Console.WriteLine(e.Message);
-        }
+    public static void Main()
+    {
+        graph = ReadGraph();
+        FindConnectedComponent();
         Console.ReadLine();
     }
 }
