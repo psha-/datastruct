@@ -1,18 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StacksQueues/LinkedStack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StacksQueues.Tests/UnitTestsArrayStack.cs">
     <Files>
-      <File FileName="StacksQueues/ArrayStack.cs" Line="15" Column="4" />
-      <File FileName="StacksQueues.Tests/UnitTestsStacksQueues.cs" Line="119" Column="38" />
-      <File FileName="StacksQueues/LinkedStack.cs" Line="23" Column="4" />
+      <File FileName="StacksQueues.Tests/UnitTestsArrayStack.cs" Line="3" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="StacksQueues" expanded="True">
-            <Node name="LinkedStack.cs" selected="True" />
-          </Node>
-          <Node name="StacksQueues.Tests" expanded="True">
+          <Node name="StacksQueues" expanded="True" />
+          <Node name="StacksQueues.Tests" expanded="True" selected="True">
             <Node name="References" expanded="True" />
             <Node name="Properties" expanded="True" />
           </Node>
@@ -22,24 +18,19 @@
         <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>node.Value</Value>
+        </State>
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True">
-          <Node name="StacksQueues.Tests" expanded="True">
-            <Node name="StacksQueues" expanded="True">
-              <Node name="Tests" expanded="True">
-                <Node name="UnitTestsStacksQueues" expanded="True" selected="True" />
-              </Node>
-            </Node>
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="/home/akrastev/Mono/Datastruct/StacksQueues/StacksQueues.Tests/UnitTestsStacksQueues.cs" line="106" column="1" />
+      <Breakpoint file="/home/akrastev/Mono/Datastruct/StacksQueues/StacksQueues.Tests/UnitTestsLinkedStacks.cs" line="105" column="1" />
+      <Breakpoint file="/home/akrastev/Mono/Datastruct/StacksQueues/StacksQueues.Tests/UnitTestsLinkedQueue.cs" line="36" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

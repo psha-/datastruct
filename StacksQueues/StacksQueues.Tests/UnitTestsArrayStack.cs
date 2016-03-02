@@ -1,6 +1,6 @@
 using System;
 
-#if MSTEST
+#if !NUNIT
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Category = Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute;
 #else
