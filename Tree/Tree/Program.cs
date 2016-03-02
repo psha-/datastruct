@@ -109,6 +109,19 @@ namespace TreeStruct
 						Console.WriteLine("Path not found in the tree.");
 					}
 					break;
+				case '3':
+					Console.WriteLine("Give an arithmetic expression:");
+					var expression = new Expression(Console.ReadLine());
+
+					try {
+						Console.WriteLine(expression.Calculate());
+					}
+					catch (InvalidOperationException e) {
+						Console.WriteLine(e.Message);
+					}
+
+
+					break;
 				}
 				Console.ReadKey();
 			}// do
