@@ -1,0 +1,5 @@
+C:\Users\asparuh\Documents\datastruct\Tree\Tree\bin\Debug\Tree.exe
+C:\Users\asparuh\Documents\datastruct\Tree\Tree\bin\Debug\Tree.pdb
+C:\Users\asparuh\Documents\datastruct\Tree\Tree\obj\x86\Debug\Tree.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\Tree\Tree\obj\x86\Debug\Tree.exe
+C:\Users\asparuh\Documents\datastruct\Tree\Tree\obj\x86\Debug\Tree.pdb

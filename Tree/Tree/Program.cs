@@ -67,14 +67,13 @@ namespace TreeStruct
 					Tree FurthestNode = Tree.GetRootNode ();
 					Tree.GetFurthestNode (ref FurthestNode, FurthestNode);
 					var depth = Tree.PrintPathTo (FurthestNode);
-					Console.WriteLine (" (length =  {0})", depth);
+					Console.WriteLine ("(length =  {0})", depth);
 					Console.WriteLine ();
 
 					Console.WriteLine ("Path of sum {0}: ", pathSum);
 					var sumLeafs = new List<Tree> ();
 					Tree.GetSumPath (pathSum, ref sumLeafs, Tree.GetRootNode ());
 					sumLeafs.ForEach (n => Tree.PrintPathTo (n));
-					Console.WriteLine ();
 					Console.WriteLine ();
 
 					Console.WriteLine ("Subtrees of sum {0}: ", subtreeSum);

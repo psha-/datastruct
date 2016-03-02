@@ -32,12 +32,12 @@ namespace TreeStruct
 
 		public static bool IsLeaf(Tree node)
 		{
-			return 0 == node.Children.Count;
+			return null != node.Parent && 0 == node.Children.Count;
 		}
 
 		public static bool IsMiddleNode(Tree node)
 		{
-			return !IsRoot(node) && !IsLeaf(node);
+			return null != node.Parent && node.Children.Count > 0;
 		}
 
 		public static Tree GetNodeByValue(int val)
@@ -120,7 +120,7 @@ namespace TreeStruct
 			while( path.Count > 1 ) {
 				Console.Write("{0} -> ", path.Pop());
 			}
-			Console.Write ("{0}", path.Pop ());
+			Console.WriteLine ("{0}", path.Pop ());
 			return depth;
 		}
 	}
