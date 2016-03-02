@@ -1,0 +1,8 @@
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\bin\Debug\BFS-Escape-from-Labyrinth.Tests.dll
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\bin\Debug\BFS-Escape-from-Labyrinth.Tests.pdb
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\bin\Debug\Escape-from-Labyrinth.exe
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\bin\Debug\Escape-from-Labyrinth.pdb
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\obj\Debug\BFS-Escape-from-Labyrinth.Tests.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\obj\Debug\BFS-Escape-from-Labyrinth.Tests.dll
+C:\Users\User\Documents\datastruct\DfsBfs\BFS-Escape-from-Labyrinth.Tests\obj\Debug\BFS-Escape-from-Labyrinth.Tests.pdb
