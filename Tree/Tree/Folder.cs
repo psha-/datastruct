@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Collections.Generic;
 
 namespace TreeStruct
 {
@@ -8,6 +9,8 @@ namespace TreeStruct
 		public string Name { get; private set;}
 		public File[] Files { get; private set;}
 		public Folder[] Children { get; private set;}
+
+		public static Dictionary<string, Folder> Folders = new Dictionary<string, Folder> ();
 
 		public Folder (string name, File[] files, Folder[] children)
 		{
@@ -29,8 +32,9 @@ namespace TreeStruct
 			for (var i=0; i< fsFiles.Length; i++) {
 				files[i] = new File(fsFiles[i].Name, fsFiles[i].Length);
 			}
-
-			return new Folder(di.Name, files, subFolders);
+			var folder = new Folder(di.Name, files, subFolders);
+			Folders [di.FullName] = folder;
+			return folder;
 		}
 
 		public static long CalculateSize(Folder folder)

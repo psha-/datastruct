@@ -94,13 +94,20 @@ namespace TreeStruct
 						DirectoryInfo di = new DirectoryInfo(@path);
 
 						var root = Folder.TraverseFolder(di);
-						Console.WriteLine("The size is: {0:n0}K", Folder.CalculateSize(root)/1024);
+
+						Console.WriteLine("Give a subpath to calculate size:");
+						var subpath = Console.ReadLine();
+						var subfolder = Folder.Folders[subpath]; 
+						Console.WriteLine("The size is: {0:n0}K", Folder.CalculateSize(subfolder)/1024);
 					}
 					catch(DirectoryNotFoundException e) {
 						Console.WriteLine(e.Message);
 					}
 					catch(ArgumentException e) {
 						Console.WriteLine(e.Message);
+					}
+					catch(KeyNotFoundException) {
+						Console.WriteLine("Path not found in the tree.");
 					}
 					break;
 				}
