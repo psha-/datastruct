@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Tree/Program.cs">
     <Files>
-      <File FileName="Tree/Program.cs" Line="23" Column="1" />
-      <File FileName="Tree/Tree.cs" Line="30" Column="19" />
+      <File FileName="Tree/Program.cs" Line="43" Column="27" />
+      <File FileName="Tree/Tree.cs" Line="50" Column="63" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

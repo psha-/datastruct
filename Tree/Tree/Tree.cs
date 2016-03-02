@@ -9,6 +9,7 @@ namespace TreeStruct
 		public int Value;
 		public IList<Tree> Children;
 		public Tree Parent;
+		private static int MaxDepth;
 
 		static Dictionary<int, Tree> nodeByValue = new Dictionary<int, Tree> ();
 
@@ -24,6 +25,21 @@ namespace TreeStruct
 
 		}
 
+		public static bool IsRoot(Tree node)
+		{
+			return null == node.Parent;
+		}
+
+		public static bool IsLeaf(Tree node)
+		{
+			return 0 == node.Children.Count;
+		}
+
+		public static bool IsMiddleNode(Tree node)
+		{
+			return !IsRoot(node) && !IsLeaf(node);
+		}
+
 		public static Tree GetNodeByValue(int val)
 		{
 			if( !nodeByValue.ContainsKey(val) ) {
@@ -34,35 +50,34 @@ namespace TreeStruct
 
 		public static Tree GetRootNode()
 		{
-			return nodeByValue.Values.FirstOrDefault (node => node.Parent == null);
+			return nodeByValue.Values.FirstOrDefault (node => IsRoot(node));
 		}
 
 		public static List<Tree> GetLeafNodes()
 		{
-			return nodeByValue.Values.Where (node => 0 == node.Children.Count ).ToList();
+			return nodeByValue.Values.Where (node => IsLeaf(node)).ToList();
 		}
 
 		public static List<Tree> GetMidNodes()
 		{
-			return nodeByValue.Values.Where (node => node.Children.Count > 0 && null != node.Parent).ToList();
+			return nodeByValue.Values.Where (node => IsMiddleNode(node)).ToList();
 		}
 
-		public static void GetSumSubtree(int sum, ref int SubtreeSum, ref List<Tree> CorrectParents, Tree node)
+		public static void GetFurthestNode(ref Tree FurthestNode, Tree parent, int depth=0)
 		{
-			SubtreeSum += node.Value;
-			int ChildrenSum = 0;
-			foreach (var child in node.Children) {
-				GetSumSubtree (sum, ref ChildrenSum, ref CorrectParents, child);
+			if( depth > MaxDepth ) {
+				MaxDepth = depth;
+				FurthestNode = parent;
 			}
-			if (sum == node.Value + ChildrenSum) {
-				CorrectParents.Add (node);
+			foreach (var child in parent.Children) {
+				GetFurthestNode(ref FurthestNode, child, depth+1);
 			}
 		}
 
 		public static void GetSumPath(int sum, ref List<Tree> CorrectLeafs, Tree node)
 		{
 			sum -= node.Value;
-			if (0 == node.Children.Count ) {
+			if (IsLeaf( node ) ) {
 				if (0 == sum) {
 					CorrectLeafs.Add (node);
 				}
@@ -73,49 +88,40 @@ namespace TreeStruct
 			}
 		}
 
-		public static void PrintSum(Tree node)
+		public static int GetSumSubtree(int sum, ref List<Tree> CorrectParents, Tree node)
 		{
-			Console.Write ("{0} ", node.Value);
+			int SubtreeSum = node.Value;
 			foreach (var child in node.Children) {
-				PrintSum (child);
+				SubtreeSum += GetSumSubtree (sum, ref CorrectParents, child);
+			}
+			if (sum == SubtreeSum) {
+				CorrectParents.Add (node);
+			}
+			return SubtreeSum;
+		}
+
+		public void DFSEach(Action<int> action)
+		{
+			action(this.Value);
+			foreach (var child in this.Children) {
+				child.DFSEach (action);
 			}
 		}
 
-		public static void PrintPathTo(Tree node)
+		public static int PrintPathTo(Tree node)
 		{
+			int depth = 0;
 			var path = new Stack<int>();
 			while (null != node) {
 				path.Push (node.Value);
 				node = node.Parent;
+				depth++;
 			}
 			while( path.Count > 1 ) {
 				Console.Write("{0} -> ", path.Pop());
 			}
-			Console.WriteLine ("{0}", path.Pop ());
+			Console.Write ("{0}", path.Pop ());
+			return depth;
 		}
-
-		public static Tree GetFurthesNode()
-		{
-			var nodes = new Stack<Tree> ();
-			var depth = 0;
-			Tree FurthestNode = GetRootNode();
-
-			nodes.Push (FurthestNode);
-			while (nodes.Count > 0) {
-				var node = nodes.Pop ();
-				if (0 == node.Children.Count ) {
-					if (nodes.Count > depth) {
-						depth = nodes.Count;
-						FurthestNode = node;
-					}
-				} else {
-					foreach (var child in node.Children) {
-						nodes.Push (child);
-					}
-				}
-			}
-			return FurthestNode;
-		}
-
 	}
 }

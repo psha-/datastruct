@@ -38,28 +38,40 @@ namespace TreeStruct
 			var subtreeSum = Int32.Parse(Console.ReadLine ());
 
 			Console.WriteLine("Root node: {0}", Tree.GetRootNode().Value);
+			Console.WriteLine ();
 
 			Console.Write("Leaf nodes:");
 			Tree.GetLeafNodes().ForEach(n => Console.Write(" {0}", n.Value));
 			Console.WriteLine();
+			Console.WriteLine ();
 
 			Console.Write("Middle nodes:");
 			Tree.GetMidNodes().ForEach(n => Console.Write(" {0}", n.Value));
 			Console.WriteLine();
+			Console.WriteLine ();
 
 			Console.Write("Longest path: ");
-			Tree.PrintPathTo (Tree.GetFurthesNode ());
+			Tree FurthestNode = Tree.GetRootNode ();
+			Tree.GetFurthestNode (ref FurthestNode, FurthestNode);
+			var depth = Tree.PrintPathTo (FurthestNode);
+			Console.WriteLine(" (length =  {0})", depth);
+			Console.WriteLine ();
 
 			Console.WriteLine("Path of sum {0}: ", pathSum);
 			var sumLeafs = new List<Tree> ();
 			Tree.GetSumPath (pathSum, ref sumLeafs, Tree.GetRootNode());
 			sumLeafs.ForEach(n => Tree.PrintPathTo (n));
+			Console.WriteLine ();
+			Console.WriteLine ();
 
-			Console.WriteLine("Subtrees of sum {0}: ", pathSum);
+			Console.WriteLine("Subtrees of sum {0}: ", subtreeSum);
 			var sumParents = new List<Tree> ();
-			int initSum = 0;
-			Tree.GetSumSubtree (subtreeSum, ref initSum, ref sumParents, Tree.GetRootNode ());
-			sumParents.ForEach (n => Tree.PrintSum (n));
+			Tree.GetSumSubtree (subtreeSum, ref sumParents, Tree.GetRootNode ());
+			foreach (var sumParent in sumParents) {
+				var sum = new List<int> ();
+				sumParent.DFSEach (sum.Add);
+				Console.WriteLine( String.Join(" + ", sum.ToArray()) );
+			}
 
 		}
 	}
