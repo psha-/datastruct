@@ -27,7 +27,7 @@ namespace TreeTraversal
 			Nodes = new Dictionary<T, Node<T>> ();
 		}
 
-		public void AddPair( T nodeVal, T parentVal ) {
+		public virtual void AddPair( T nodeVal, T parentVal ) {
 			Node<T> parent;
 			Node<T> node;
 
@@ -52,6 +52,11 @@ namespace TreeTraversal
 		public static bool IsRoot(Node<T> node)
 		{
 			return 0 == node.Parents.Count;
+		}
+
+		public static bool IsLeaf(Node<T> node)
+		{
+			return 0 == node.Children.Count;
 		}
 
 		public List<T> GetRoot()
@@ -107,7 +112,7 @@ namespace TreeTraversal
 			Nodes = new Dictionary<T, Node<T>> (max);
 		}
 
-		public new void AddPair(T nodeVal, T parentVal)
+		public override void AddPair(T nodeVal, T parentVal)
 		{
 			if (Nodes.Count == MaxCount && (!Nodes.ContainsKey (nodeVal) || !Nodes.ContainsKey (parentVal))) {
 				throw new OverflowException ("No more than " + MaxCount + " nodes allowed.");
@@ -133,6 +138,54 @@ namespace TreeTraversal
 
 			return depth;
 		}
+	}
+
+	class TreeInt<Node>: LimitedGraph<int, Node> {
+
+		public TreeInt(int max):base(max)
+		{
+
+		}
+
+		public override void AddPair(int nodeVal, int parentVal)
+		{
+			base.AddPair (nodeVal, parentVal);
+			if (Nodes [nodeVal].Parents.Count > 1) {
+				throw new InvalidOperationException ("Tree nodes can have only one parent");
+			}
+		}
+
+		private int SumPathToRoot(Node<int> node)
+		{
+			var sum = 0;
+			while (!IsRoot(node)) {
+				sum += node.Value;
+				node = node.Parents [0];
+			}
+			return sum+node.Value;
+		}
+
+		private int SumPath(Node<int> fromNode, Node<int> toNode)
+		{
+			return SumPathToRoot (fromNode) - SumPathToRoot (toNode) + toNode.Value;
+		}
+
+		public int CalcLongestLeafPath()
+		{
+			int maxSum = 0;
+			foreach (var node1 in Nodes) {
+				foreach (var node2 in Nodes) {
+					if( IsLeaf(node1.Value) && IsLeaf(node2.Value) && node1.Value != node2.Value) {
+						var sum = SumPath(node1.Value, node2.Value);
+						if (sum > maxSum) {
+							maxSum = sum;
+						}
+					}
+				}
+			}
+			return maxSum;
+		}
+
 	}
 }
 
