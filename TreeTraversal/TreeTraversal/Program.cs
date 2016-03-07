@@ -103,6 +103,9 @@ namespace TreeTraversal
 							int[] pair = Console.ReadLine ().Split ().Select (h => int.Parse (h)).ToArray ();
 							try {
 								tree.AddPair(pair[1], pair[0]);
+							} catch (IndexOutOfRangeException e) {
+								Console.WriteLine (e.Message);
+								i--;
 							} catch (OverflowException e) {
 								Console.WriteLine (e.Message);
 								i--;

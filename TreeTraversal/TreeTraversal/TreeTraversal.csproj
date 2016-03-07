@@ -39,6 +39,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="Horse.cs" />
+    <Compile Include="TreeInt.cs" />
+    <Compile Include="LimitedGraph.cs" />
+    <Compile Include="RoundGraph.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
