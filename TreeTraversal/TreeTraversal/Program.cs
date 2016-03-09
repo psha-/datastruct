@@ -14,6 +14,7 @@ namespace TreeTraversal
 				Console.WriteLine("2 - Round dance.");
 				Console.WriteLine("3 - Ride the horse.");
 				Console.WriteLine("4 - Longest path.");
+				Console.WriteLine("5 - Sorting.");
 				Console.WriteLine("q - Quit");
 				key = Console.ReadKey ();
 				Console.WriteLine();
@@ -119,6 +120,22 @@ namespace TreeTraversal
 						Console.WriteLine (e.Message);
 					}
 
+					break;
+
+				case '5':
+					try{
+						Console.WriteLine("Sorting.");
+						Console.WriteLine("Enter numbers count:");
+						int numCount = int.Parse(Console.ReadLine());
+						Console.WriteLine("Enter {0} numbers:", numCount);
+						int[] numbers = Console.ReadLine ().Split ().Select (h => int.Parse (h)).ToArray ();
+						Console.WriteLine("Enter number of consecutive elements to reorder:");
+						int reorderCount = int.Parse(Console.ReadLine());
+						var sortOp = new SortOperations(numbers,reorderCount);
+						Console.WriteLine("{0}", sortOp.GetSortOperations());
+					} catch(FormatException e) {
+						Console.WriteLine(e.Message);
+					}
 					break;
 				}
 				Console.ReadKey();
