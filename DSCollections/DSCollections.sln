@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Products", "SpecialCollections\Products.csproj", "{C48CD60C-BDB5-4A2A-8799-39B11BFFEB20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Editor", "Editor\Editor.csproj", "{C2C84ADF-9B3C-4286-BCFE-F1776D993C60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C84ADF-9B3C-4286-BCFE-F1776D993C60}.Debug|x86.ActiveCfg = Debug|x86
+		{C2C84ADF-9B3C-4286-BCFE-F1776D993C60}.Debug|x86.Build.0 = Debug|x86
+		{C2C84ADF-9B3C-4286-BCFE-F1776D993C60}.Release|x86.ActiveCfg = Release|x86
+		{C2C84ADF-9B3C-4286-BCFE-F1776D993C60}.Release|x86.Build.0 = Release|x86
+		{C48CD60C-BDB5-4A2A-8799-39B11BFFEB20}.Debug|x86.ActiveCfg = Debug|x86
+		{C48CD60C-BDB5-4A2A-8799-39B11BFFEB20}.Debug|x86.Build.0 = Debug|x86
+		{C48CD60C-BDB5-4A2A-8799-39B11BFFEB20}.Release|x86.ActiveCfg = Release|x86
+		{C48CD60C-BDB5-4A2A-8799-39B11BFFEB20}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Editor\Editor.csproj
+	EndGlobalSection
+EndGlobal
