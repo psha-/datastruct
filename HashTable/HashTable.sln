@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "HashTable\HashTable.csproj", "{258813CD-C828-4DC2-809F-D39A4D48595A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WordCount", "WordCount\WordCount.csproj", "{118788E4-4E90-43C6-9306-CB07F652FA8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneBook", "PhoneBook\PhoneBook.csproj", "{15DFCFA2-CA08-4734-8A9F-4E8752C7254D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderedSet", "OrderedSet\OrderedSet.csproj", "{3216AC17-BD44-471F-AF77-73A9A226306E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{118788E4-4E90-43C6-9306-CB07F652FA8A}.Debug|x86.ActiveCfg = Debug|x86
+		{118788E4-4E90-43C6-9306-CB07F652FA8A}.Debug|x86.Build.0 = Debug|x86
+		{118788E4-4E90-43C6-9306-CB07F652FA8A}.Release|x86.ActiveCfg = Release|x86
+		{118788E4-4E90-43C6-9306-CB07F652FA8A}.Release|x86.Build.0 = Release|x86
+		{15DFCFA2-CA08-4734-8A9F-4E8752C7254D}.Debug|x86.ActiveCfg = Debug|x86
+		{15DFCFA2-CA08-4734-8A9F-4E8752C7254D}.Debug|x86.Build.0 = Debug|x86
+		{15DFCFA2-CA08-4734-8A9F-4E8752C7254D}.Release|x86.ActiveCfg = Release|x86
+		{15DFCFA2-CA08-4734-8A9F-4E8752C7254D}.Release|x86.Build.0 = Release|x86
+		{258813CD-C828-4DC2-809F-D39A4D48595A}.Debug|x86.ActiveCfg = Debug|x86
+		{258813CD-C828-4DC2-809F-D39A4D48595A}.Debug|x86.Build.0 = Debug|x86
+		{258813CD-C828-4DC2-809F-D39A4D48595A}.Release|x86.ActiveCfg = Release|x86
+		{258813CD-C828-4DC2-809F-D39A4D48595A}.Release|x86.Build.0 = Release|x86
+		{3216AC17-BD44-471F-AF77-73A9A226306E}.Debug|x86.ActiveCfg = Debug|x86
+		{3216AC17-BD44-471F-AF77-73A9A226306E}.Debug|x86.Build.0 = Debug|x86
+		{3216AC17-BD44-471F-AF77-73A9A226306E}.Release|x86.ActiveCfg = Release|x86
+		{3216AC17-BD44-471F-AF77-73A9A226306E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = OrderedSet\OrderedSet.csproj
+	EndGlobalSection
+EndGlobal
