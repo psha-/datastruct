@@ -1,0 +1,6 @@
+C:\Users\asparuh\Documents\datastruct\DSCollections\Editor\bin\Debug\Editor.exe
+C:\Users\asparuh\Documents\datastruct\DSCollections\Editor\bin\Debug\Editor.pdb
+C:\Users\asparuh\Documents\datastruct\DSCollections\Editor\bin\Debug\PowerCollections.dll
+C:\Users\asparuh\Documents\datastruct\DSCollections\Editor\obj\x86\Debug\Editor.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\DSCollections\Editor\obj\x86\Debug\Editor.exe
+C:\Users\asparuh\Documents\datastruct\DSCollections\Editor\obj\x86\Debug\Editor.pdb
