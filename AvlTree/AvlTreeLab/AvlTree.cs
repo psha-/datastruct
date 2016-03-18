@@ -1,4 +1,6 @@
-﻿namespace AvlTreeLab
+﻿using System.Collections.Generic;
+
+namespace AvlTreeLab
 {
     using System;
     
@@ -10,15 +12,15 @@
         
         public void Add(T item)
         {
-            if( Contains(item))
-            {
-                return;
-            }
             var newNode = new Node<T>(item);
-            if ( 0 == Count )
+            if (0 == Count)
             {
                 root = newNode;
                 Count++;
+                return;
+            }
+            if ( Contains(item))
+            {
                 return;
             }
             var node = root;
@@ -28,7 +30,7 @@
                 {
                     if (null == node.Left) {
                         node.Left = newNode;
-                        newNode.Parent = node;
+                        node.BalanceFactor++;
                         break;
                     }
                     node = node.Left;
@@ -38,19 +40,61 @@
                     if (null == node.Right)
                     {
                         node.Right = newNode;
-                        newNode.Parent = node;
+                        node.BalanceFactor--;
                         break;
                     }
                     node = node.Right;
                 }
             }
             Count++;
-            Rebalance(node);
+            Retrace(node);
         }
 
-        private void Rebalance(Node<T> node)
+        private void Retrace(Node<T> node)
         {
+            var parent = node.Parent;
+            while( null != parent )
+            {
+                if (0 == node.BalanceFactor)
+                {
+                    //TODO: Check this case
+                    break;
+                }
+                parent.BalanceFactor += node.IsLeft ? 1 : -1;
+                if (Math.Abs(parent.BalanceFactor) > 1)
+                {
+                    if (node.IsLeft)
+                    {
+                        if (-1 == node.BalanceFactor)
+                        {
+                            // Left Right case
+                            node.RotateLeft();
+                        }
+                        if (parent.IsRoot)
+                        {
+                            root = parent.Left;
+                        }
+                        parent.RotateRight();
+                    }
+                    else if (node.IsRight)
+                    {
+                        if ( 1 == node.BalanceFactor) {
+                            // Right left case
+                            node.RotateRight();
+                        }
+                        if (parent.IsRoot)
+                        {
+                            root = parent.Right;
+                        }
+                        parent.RotateLeft();
+                    }
+                    parent.BalanceFactor = 0;
+                    node.BalanceFactor = 0;
+                }
+                node = parent;
+                parent = node.Parent;
 
+            }
         }
 
         public bool Contains(T item)
@@ -76,6 +120,49 @@
 
         public void ForeachDfs(Action<int, T> action)
         {
+            if (0 == Count)
+            {
+                return;
+            }
+            InorderDFS(root, 1, action);
+        }
+
+        private void InorderDFS( Node<T> node, int depth, Action<int, T> action)
+        {
+            if (null != node.Left)
+            {
+                InorderDFS(node.Left, depth+1, action);
+            }
+            action(depth, node.Value);
+            if (null != node.Right)
+            {
+                InorderDFS(node.Right, depth + 1, action);
+            }
+        }
+
+        public void Range(T from, T to)
+        {
+            RangeDFS(root, from, to);
+        }
+
+        private void RangeDFS(Node<T> node, T from, T to)
+        {
+            if (null == node)
+            {
+                return;
+            }
+            if (from.CompareTo(node.Value) < 0)
+            {
+                RangeDFS(node.Left, from, to);
+            }
+            if (from.CompareTo(node.Value) <= 0 && to.CompareTo(node.Value) >= 0)
+            {
+                Console.Write(node.Value + " ");
+            }
+            if (to.CompareTo(node.Value) > 0 )
+            {
+                RangeDFS(node.Right, from, to);
+            }
 
         }
     }
