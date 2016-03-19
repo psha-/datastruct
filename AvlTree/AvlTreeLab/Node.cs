@@ -10,6 +10,14 @@ namespace AvlTreeLab
         public T Value { get; private set; }
         public Node<T> Parent { get; set; }
         public int BalanceFactor { get; set; }
+        public int LeftCount { get; set; }
+
+        public Node(T val)
+        {
+            Value = val;
+            BalanceFactor = 0;
+            LeftCount = 0;
+        }
 
         public Node<T> Left
         {
@@ -72,13 +80,8 @@ namespace AvlTreeLab
 
         public override string ToString()
         {
-            return Value.ToString();
-        }
-
-        public Node(T val)
-        {
-            Value = val;
-            BalanceFactor = 0;
+            return string.Format("V: {0}, L: {1}, R: {2}, BF: {3}, LC: {4}", 
+                Value, null != Left ? Left.Value.ToString() : "null", null != Right ? Right.Value.ToString() : "null", BalanceFactor, LeftCount);
         }
 
         public bool IsRoot
@@ -108,6 +111,8 @@ namespace AvlTreeLab
             }
             Right = child.Left;
             child.Left = this;
+
+            child.LeftCount = child.LeftCount + this.LeftCount + 1;
         }
         public void RotateRight()
         {
@@ -129,6 +134,8 @@ namespace AvlTreeLab
             }
             Left = child.Right;
             child.Right = this;
+
+            LeftCount = LeftCount - child.LeftCount - 1;
         }
     }
 }

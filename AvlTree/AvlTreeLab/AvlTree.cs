@@ -31,6 +31,7 @@ namespace AvlTreeLab
                     if (null == node.Left) {
                         node.Left = newNode;
                         node.BalanceFactor++;
+                        node.LeftCount = 1;
                         break;
                     }
                     node = node.Left;
@@ -52,13 +53,18 @@ namespace AvlTreeLab
 
         private void Retrace(Node<T> node)
         {
+            var balanced = false;
             var parent = node.Parent;
-            while( null != parent )
+            for ( ; !node.IsRoot; node=parent, parent = node.Parent )
             {
-                if (0 == node.BalanceFactor)
+                if( node.IsLeft )
                 {
-                    //TODO: Check this case
-                    break;
+                    parent.LeftCount++;
+                }
+                if (balanced || 0 == node.BalanceFactor)
+                {
+                    balanced = true;
+                    continue;
                 }
                 parent.BalanceFactor += node.IsLeft ? 1 : -1;
                 if (Math.Abs(parent.BalanceFactor) > 1)
@@ -75,6 +81,7 @@ namespace AvlTreeLab
                             root = parent.Left;
                         }
                         parent.RotateRight();
+                        parent.LeftCount++;
                     }
                     else if (node.IsRight)
                     {
@@ -90,10 +97,32 @@ namespace AvlTreeLab
                     }
                     parent.BalanceFactor = 0;
                     node.BalanceFactor = 0;
+                    // No need to retrace the parent. It was rotated and it's new parent was traced already as his child.
+                    parent = parent.Parent;
                 }
-                node = parent;
-                parent = node.Parent;
+            }
+        }
 
+        public T this[int index]
+        {
+            get
+            {
+                if (index > Count - 1)
+                {
+                    throw new IndexOutOfRangeException();
+                }
+                var node = root;
+                while(index != node.LeftCount) {
+                    if( index > node.LeftCount )
+                    {
+                        index -= node.LeftCount + 1;
+                        node = node.Right;
+                    } else
+                    {
+                        node = node.Left;
+                    }
+                }
+                return node.Value;
             }
         }
 
