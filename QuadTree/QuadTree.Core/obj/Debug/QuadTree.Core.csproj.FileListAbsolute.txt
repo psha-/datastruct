@@ -1,0 +1,5 @@
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Core\bin\Debug\QuadTree.Core.dll
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Core\bin\Debug\QuadTree.Core.pdb
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Core\obj\Debug\QuadTree.Core.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Core\obj\Debug\QuadTree.Core.dll
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Core\obj\Debug\QuadTree.Core.pdb
