@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Students", "Students\Students.csproj", "{3B8DBA16-9323-44B4-9264-695F35A976B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiDictionary", "BiDictionary\BiDictionary.csproj", "{EB2CC34F-B594-4388-8AC9-323206C61C64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B8DBA16-9323-44B4-9264-695F35A976B7}.Debug|x86.ActiveCfg = Debug|x86
+		{3B8DBA16-9323-44B4-9264-695F35A976B7}.Debug|x86.Build.0 = Debug|x86
+		{3B8DBA16-9323-44B4-9264-695F35A976B7}.Release|x86.ActiveCfg = Release|x86
+		{3B8DBA16-9323-44B4-9264-695F35A976B7}.Release|x86.Build.0 = Release|x86
+		{EB2CC34F-B594-4388-8AC9-323206C61C64}.Debug|x86.ActiveCfg = Debug|x86
+		{EB2CC34F-B594-4388-8AC9-323206C61C64}.Debug|x86.Build.0 = Debug|x86
+		{EB2CC34F-B594-4388-8AC9-323206C61C64}.Release|x86.ActiveCfg = Release|x86
+		{EB2CC34F-B594-4388-8AC9-323206C61C64}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = BiDictionary\BiDictionary.csproj
+	EndGlobalSection
+EndGlobal
