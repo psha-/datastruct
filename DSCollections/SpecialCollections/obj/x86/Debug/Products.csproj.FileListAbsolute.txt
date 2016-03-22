@@ -1,0 +1,6 @@
+C:\Users\asparuh\Documents\datastruct\DSCollections\SpecialCollections\bin\Debug\SpecialCollections.exe
+C:\Users\asparuh\Documents\datastruct\DSCollections\SpecialCollections\bin\Debug\SpecialCollections.pdb
+C:\Users\asparuh\Documents\datastruct\DSCollections\SpecialCollections\bin\Debug\PowerCollections.dll
+C:\Users\asparuh\Documents\datastruct\DSCollections\SpecialCollections\obj\x86\Debug\Products.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\DSCollections\SpecialCollections\obj\x86\Debug\SpecialCollections.exe
+C:\Users\asparuh\Documents\datastruct\DSCollections\SpecialCollections\obj\x86\Debug\SpecialCollections.pdb

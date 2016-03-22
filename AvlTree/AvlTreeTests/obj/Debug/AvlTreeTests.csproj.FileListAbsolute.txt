@@ -1,0 +1,8 @@
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\bin\Debug\AvlTreeTests.dll
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\bin\Debug\AvlTreeTests.pdb
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\bin\Debug\AvlTreeLab.exe
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\bin\Debug\AvlTreeLab.pdb
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\obj\Debug\AvlTreeTests.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\obj\Debug\AvlTreeTests.dll
+C:\Users\asparuh\Documents\datastruct\AvlTree\AvlTreeTests\obj\Debug\AvlTreeTests.pdb

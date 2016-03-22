@@ -1,0 +1,7 @@
+C:\Users\asparuh\Documents\datastruct\DSCollections\Products.Tests\bin\Debug\Products.Tests.dll
+C:\Users\asparuh\Documents\datastruct\DSCollections\Products.Tests\bin\Debug\Products.Tests.pdb
+C:\Users\asparuh\Documents\datastruct\DSCollections\Products.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\asparuh\Documents\datastruct\DSCollections\Products.Tests\obj\Debug\Products.Tests.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\DSCollections\Products.Tests\obj\Debug\Products.Tests.dll
+C:\Users\asparuh\Documents\datastruct\DSCollections\Products.Tests\obj\Debug\Products.Tests.pdb
+C:\Users\asparuh\Documents\datastruct\DSCollections\Products.Tests\bin\Debug\PowerCollections.dll

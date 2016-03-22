@@ -8,7 +8,7 @@ namespace OrderedSet
 		{
 			var ints = new OrderedSet<int> ();
 
-			Console.WriteLine ("Initial tree:");
+			Console.WriteLine ("Initial set:");
 			ints.Add (17);
 			ints.Add (17);
 			ints.Add (17);

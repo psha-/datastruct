@@ -1,0 +1,8 @@
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\bin\Debug\QuadTree.Tests.dll
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\bin\Debug\QuadTree.Tests.pdb
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\bin\Debug\QuadTree.Core.dll
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\bin\Debug\QuadTree.Core.pdb
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\obj\Debug\QuadTree.Tests.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\obj\Debug\QuadTree.Tests.dll
+C:\Users\asparuh\Documents\datastruct\QuadTree\QuadTree.Tests\obj\Debug\QuadTree.Tests.pdb

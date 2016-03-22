@@ -12,6 +12,11 @@
             this.Bounds = new Rectangle(x, y, width, height);
             this.Items = new List<T>();
         }
+        public Node(Rectangle bounds)
+        {
+            Bounds = bounds;
+            this.Items = new List<T>();
+        }
 
         public Rectangle Bounds { get; set; }
 
@@ -21,7 +26,7 @@
 
         public bool ShouldSplit
         {
-            get { throw new NotImplementedException(); }
+            get { return null == Children && Items.Count == MaxItemCount; }
         }
 
         public override string ToString()
