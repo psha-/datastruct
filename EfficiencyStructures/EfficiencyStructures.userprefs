@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="BiDictionary/BiDictionary.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Products/ProductCollection.cs">
     <Files>
-      <File FileName="BiDictionary/BiDictionary.cs" Line="37" Column="24" />
-      <File FileName="BiDictionary/Program.cs" Line="18" Column="52" />
-      <File FileName="BiDictionary/Value.cs" Line="18" Column="1" />
+      <File FileName="Products/Product.cs" Line="8" Column="42" />
+      <File FileName="Products/Program.cs" Line="13" Column="49" />
+      <File FileName="Products/ProductCollection.cs" Line="35" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
