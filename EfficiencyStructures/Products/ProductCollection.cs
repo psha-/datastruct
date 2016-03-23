@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using Wintellect.PowerCollections;
 using System.Text;
+using System.Collections;
 
 namespace Products
 {
-	public class ProductCollection
+	public class ProductCollection: IEnumerable
 	{
 		Dictionary<int, Product> ProductsById
 			= new Dictionary<int, Product>(10000);
@@ -91,43 +92,45 @@ namespace Products
 
 		}
 
-		public override string ToString ()
+		IEnumerator IEnumerable.GetEnumerator()
 		{
-		var result = new StringBuilder ();
-			foreach (var product in ProductsById) {
-				result.Append (product.ToString ());
-			}
-			return result.ToString();
+			return (IEnumerator) GetEnumerator();
 		}
 
-		public void FindByPrice(float from, float to)
+		public IEnumerator GetEnumerator()
 		{
-			Console.WriteLine(ProductsByPrice.Range (from, true, to, true));
+			return ProductsById.GetEnumerator ();
 		}
 
-		public void FindByTitle(string title)
+
+		public IEnumerator FindByPrice(float from, float to)
 		{
-			Console.WriteLine(ProductsByTitle[title]);
+			return ProductsByPrice.Range (from, true, to, true).GetEnumerator();
 		}
 
-		public void FindByTitlePrice(string title, float price)
+		public IEnumerator FindByTitle(string title)
 		{
-			Console.WriteLine(ProductsByTitlePrice[title][price]);
+			return ProductsByTitle[title].GetEnumerator();
 		}
 
-		public void FindByTitlePrice(string title, float from, float to)
+		public IEnumerator FindByTitlePrice(string title, float price)
 		{
-			Console.WriteLine(ProductsByTitlePrice[title].Range(from, true, to, true));
+			return ProductsByTitlePrice[title][price].GetEnumerator();
 		}
 
-		public void FindBySupplierPrice(string supplier, float price)
+		public IEnumerator FindByTitlePrice(string title, float from, float to)
 		{
-			Console.WriteLine(ProductsBySupplierPrice[supplier][price]);
+			return ProductsByTitlePrice[title].Range(from, true, to, true).GetEnumerator();
 		}
 
-		public void FindBySupplierPrice(string supplier, float from, float to)
+		public IEnumerator FindBySupplierPrice(string supplier, float price)
 		{
-			Console.WriteLine(ProductsBySupplierPrice[supplier].Range(from, true, to, true));
+			return ProductsBySupplierPrice[supplier][price].GetEnumerator();
+		}
+
+		public IEnumerator FindBySupplierPrice(string supplier, float from, float to)
+		{
+			return ProductsBySupplierPrice[supplier].Range(from, true, to, true).GetEnumerator();
 		}
 
 	}

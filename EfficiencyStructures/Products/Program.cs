@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Products
@@ -16,22 +17,56 @@ namespace Products
 				products.Add (new Product(i+50, "Product"+i, "Comapny"+i, random.Next(0, 20)));
 			}
 			Console.WriteLine("All products:");
-			Console.WriteLine (products);
+			DisplayEnumerator(products.GetEnumerator());
 			try {
-				Console.WriteLine("Price 0-10:");
-				products.FindByPrice(0, 10);
-				Console.WriteLine("Title Product1:");
-				products.FindByTitle("Product1");
-				Console.WriteLine("Title Product1, price 5:");
-				products.FindByTitlePrice("Product1", 5);
-				Console.WriteLine("Title Product1, price 0-10:");
-				products.FindByTitlePrice("Product1", 0, 10);
-				Console.WriteLine("Supplier Company10, price 5:");
-				products.FindBySupplierPrice("Company10", 5);
-				Console.WriteLine("Supplier Company10, price 0-10:");
-				products.FindBySupplierPrice("Company10", 0, 10);
-			} catch(KeyNotFoundException e) {
+				Console.WriteLine("\nPrice 0-10:");
+				DisplayEnumerator( products.FindByPrice(0, 10) );
+			} catch(KeyNotFoundException) {
+				Console.WriteLine ("Products not found");
+			}
 
+			try {
+				Console.WriteLine("\nTitle Product1:");
+				DisplayEnumerator( products.FindByTitle("Product1"));
+			} catch(KeyNotFoundException) {
+				Console.WriteLine ("Products not found");
+			}
+
+			try {
+				Console.WriteLine("\nTitle Product1, price 5:");
+				DisplayEnumerator( products.FindByTitlePrice("Product1", 5));
+			} catch(KeyNotFoundException) {
+				Console.WriteLine ("Products not found");
+			}
+
+			try{
+				Console.WriteLine("\nTitle Product1, price 0-10:");
+				DisplayEnumerator( products.FindByTitlePrice("Product1", 0, 10));
+			} catch(KeyNotFoundException) {
+				Console.WriteLine ("Products not found");
+			}
+
+			try {
+				Console.WriteLine("\nSupplier Company10, price 5:");
+				DisplayEnumerator( products.FindBySupplierPrice("Company10", 5));
+			} catch(KeyNotFoundException) {
+				Console.WriteLine ("Products not found");
+			}
+
+			try {
+				Console.WriteLine("\nSupplier Company10, price 0-10:");
+				DisplayEnumerator( products.FindBySupplierPrice("Company10", 0, 10));
+			} catch(KeyNotFoundException) {
+				Console.WriteLine ("Products not found");
+			}
+		}
+
+		public static void DisplayEnumerator(IEnumerator myEnumerator)
+		{
+			while (myEnumerator.MoveNext())
+			{
+				Console.WriteLine("{0}",
+				myEnumerator.Current);
 			}
 		}
 	}

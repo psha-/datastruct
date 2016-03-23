@@ -19,7 +19,7 @@ namespace Products
 
 		public override string ToString ()
 		{
-			return string.Format ("[{0},{1},{2},{3}]\n", Id, Title, Supplier, Price);
+			return string.Format ("[Id:{0}, Title:{1}, Supplier:{2}, Price:{3}]", Id, Title, Supplier, Price);
 		}
 	}
 }
