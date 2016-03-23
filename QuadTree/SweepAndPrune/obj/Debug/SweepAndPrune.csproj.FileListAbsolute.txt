@@ -1,0 +1,6 @@
+C:\Users\asparuh\Documents\datastruct\QuadTree\SweepAndPrune\bin\Debug\SweepAndPrune.exe.config
+C:\Users\asparuh\Documents\datastruct\QuadTree\SweepAndPrune\bin\Debug\SweepAndPrune.exe
+C:\Users\asparuh\Documents\datastruct\QuadTree\SweepAndPrune\bin\Debug\SweepAndPrune.pdb
+C:\Users\asparuh\Documents\datastruct\QuadTree\SweepAndPrune\obj\Debug\SweepAndPrune.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\QuadTree\SweepAndPrune\obj\Debug\SweepAndPrune.exe
+C:\Users\asparuh\Documents\datastruct\QuadTree\SweepAndPrune\obj\Debug\SweepAndPrune.pdb
