@@ -1,0 +1,6 @@
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Collection-of-Persons\Collection-of-Persons\bin\Debug\Collection-of-Persons.exe
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Collection-of-Persons\Collection-of-Persons\bin\Debug\Collection-of-Persons.pdb
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Collection-of-Persons\Collection-of-Persons\bin\Debug\PowerCollections.dll
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Collection-of-Persons\Collection-of-Persons\obj\Debug\Collection-of-Persons.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Collection-of-Persons\Collection-of-Persons\obj\Debug\Collection-of-Persons.exe
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Collection-of-Persons\Collection-of-Persons\obj\Debug\Collection-of-Persons.pdb
