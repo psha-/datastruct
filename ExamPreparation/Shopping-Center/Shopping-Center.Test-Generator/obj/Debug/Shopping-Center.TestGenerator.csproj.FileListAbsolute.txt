@@ -1,0 +1,9 @@
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\obj\Debug\Shopping-Center.TestGenerator.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\bin\Debug\Shopping-Center.Tests.dll
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\bin\Debug\Shopping-Center.Tests.pdb
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\bin\Debug\Shopping-Center.exe
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\bin\Debug\PowerCollections.dll
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\bin\Debug\Shopping-Center.pdb
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\obj\Debug\Shopping-Center.Tests.dll
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Test-Generator\obj\Debug\Shopping-Center.Tests.pdb

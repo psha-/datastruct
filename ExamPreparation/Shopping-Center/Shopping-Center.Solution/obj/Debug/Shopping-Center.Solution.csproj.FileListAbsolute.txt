@@ -1,0 +1,6 @@
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Solution\obj\Debug\Shopping-Center.Solution.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Solution\bin\Debug\Shopping-Center.exe
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Solution\bin\Debug\Shopping-Center.pdb
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Solution\bin\Debug\PowerCollections.dll
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Solution\obj\Debug\Shopping-Center.exe
+C:\Users\asparuh\Documents\datastruct\ExamPreparation\Shopping-Center\Shopping-Center.Solution\obj\Debug\Shopping-Center.pdb

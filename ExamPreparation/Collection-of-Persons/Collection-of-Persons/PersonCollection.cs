@@ -12,11 +12,11 @@ public class PersonCollection : IPersonCollection
 
     public PersonCollection()
     {
-        personsByEmail = new Dictionary<string, Person>(1000);
-        personsByDomain = new Dictionary<string, SortedSet<Person>>(1000);
+        personsByEmail = new Dictionary<string, Person>();
+        personsByDomain = new Dictionary<string, SortedSet<Person>>();
         personsByAge = new OrderedMultiDictionary<int, Person>(true);
-        personsByTownAge = new Dictionary<string, OrderedMultiDictionary<int, Person>>(1000);
-        personsByNameTown = new Dictionary<string, SortedSet<Person>>(1000);
+        personsByTownAge = new Dictionary<string, OrderedMultiDictionary<int, Person>>();
+        personsByNameTown = new Dictionary<string, SortedSet<Person>>();
     }
 
     public bool AddPerson(string email, string name, int age, string town)
@@ -25,15 +25,25 @@ public class PersonCollection : IPersonCollection
         {
             return false;
         }
+        var domain = GetDomain(email);
+        if (!personsByDomain.ContainsKey(domain))
+        {
+            personsByDomain[domain] = new SortedSet<Person>();
+        }
         if (!personsByTownAge.ContainsKey(town))
         {
             personsByTownAge[town] = new OrderedMultiDictionary<int, Person>(true);
+        }
+        var nameTown = name + '|' + town;
+        if (!personsByNameTown.ContainsKey(nameTown))
+        {
+            personsByNameTown[nameTown] = new SortedSet<Person>();
         }
 
         var person = new Person(email, name, age, town);
         personsByEmail[email] = person;
         personsByAge[age].Add(person);
-        personsByDomain[GetDomain(email)].Add(person);
+        personsByDomain[domain].Add(person);
         personsByTownAge[town][age].Add(person);
         personsByNameTown[name+'|'+town].Add(person);
 
@@ -50,12 +60,11 @@ public class PersonCollection : IPersonCollection
 
     public Person FindPerson(string email)
     {
-        try {
-            return personsByEmail[email];
-        } catch(KeyNotFoundException)
+        if(!personsByEmail.ContainsKey(email) )
         {
             return null;
         }
+        return personsByEmail[email];
     }
 
     public bool DeletePerson(string email)
@@ -97,29 +106,50 @@ public class PersonCollection : IPersonCollection
 
     public IEnumerable<Person> FindPersons(string emailDomain)
     {
+        if( !personsByDomain.ContainsKey(emailDomain))
+        {
+            return new List<Person>();
+        }
         return personsByDomain[emailDomain];
     }
 
     public IEnumerable<Person> FindPersons(string name, string town)
     {
-        try {
-            return personsByNameTown[name+'|'+town];
-        }
-        catch (KeyNotFoundException)
+        var nameTown = name + '|' + town;
+        if (!personsByNameTown.ContainsKey(nameTown))
         {
-            return null;
+            return new List<Person>();
         }
+        return personsByNameTown[nameTown];
     }
 
     public IEnumerable<Person> FindPersons(int startAge, int endAge)
     {
-        return (IEnumerable<Person>) personsByAge.Range(startAge, true, endAge, true);
+        var range = personsByAge.Range(startAge, true, endAge, true);
+        foreach ( var items in range )
+        {
+            foreach (var item in items.Value)
+            {
+                yield return item;
+            }
+        }
     }
 
     public IEnumerable<Person> FindPersons(
         int startAge, int endAge, string town)
     {
-        return (IEnumerable<Person>) personsByTownAge[town].Range(startAge, true, endAge, true);
+        if( !personsByTownAge.ContainsKey(town))
+        {
+            yield break;
+        }
+        var range = personsByTownAge[town].Range(startAge, true, endAge, true);
+        foreach (var items in range)
+        {
+            foreach( var item in items.Value )
+            {
+                yield return item;
+            }
+        }
     }
 
     public static string GetDomain(string email)
