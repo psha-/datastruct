@@ -1,0 +1,8 @@
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\bin\Debug\BunnyWars.Tests.dll
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\bin\Debug\BunnyWars.Tests.pdb
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\bin\Debug\BunnyWars.Core.exe
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\bin\Debug\BunnyWars.Core.pdb
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\obj\Debug\BunnyWars.Tests.csprojResolveAssemblyReference.cache
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\obj\Debug\BunnyWars.Tests.dll
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\obj\Debug\BunnyWars.Tests.pdb
+C:\Users\asparuh\Documents\datastruct\Exam\Problem-2-Bunny-Wars\C#-Skeleton\BunnyWars.Tests\bin\Debug\PowerCollections.dll
