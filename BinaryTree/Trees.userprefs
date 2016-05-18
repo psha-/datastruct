@@ -5,6 +5,23 @@
       <File FileName="Binary-Tree/PlayWithTrees.cs" Line="1" Column="1" />
       <File FileName="Binary-Tree/Tree.cs" Line="26" Column="35" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Trees" expanded="True">
+            <Node name="Tree.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>node.Value</Value>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuadTree", "QuadTree\QuadTree.csproj", "{17110A01-6EDF-41B1-83E9-040E46C1BFB3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17110A01-6EDF-41B1-83E9-040E46C1BFB3}.Debug|x86.ActiveCfg = Debug|x86
+		{17110A01-6EDF-41B1-83E9-040E46C1BFB3}.Debug|x86.Build.0 = Debug|x86
+		{17110A01-6EDF-41B1-83E9-040E46C1BFB3}.Release|x86.ActiveCfg = Release|x86
+		{17110A01-6EDF-41B1-83E9-040E46C1BFB3}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = QuadTree\QuadTree.csproj
+	EndGlobalSection
+EndGlobal
